@@ -52,7 +52,7 @@ const Home = () => {
     setError(null);
 
     try {
-      const response = await fetch(`/api/discogs/search?q=${encodeURIComponent(query)}&type=master`);
+      const response = await fetch(`/api/discogs/search?q=${encodeURIComponent(query)}&type=master&key=${process.env.DISCOGS_KEY}&secret=${process.env.DISCOGS_SECRET}`);
       const data = await response.json();
 
       if (!response.ok) {
