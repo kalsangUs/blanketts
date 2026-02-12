@@ -148,12 +148,12 @@ const Home = () => {
 
         {selectedAlbums.length > 0 && (
           <div className="mt-4">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0 md:gap-x-4 md:gap-y-1">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0 md:gap-x-4 md:gap-y-1 px-2">
               {selectedAlbums.map((album) => (
                 <Card 
                   key={album.id} 
                   onDoubleClick={() => removeAlbum(album.id)}
-                  className="group overflow-hidden border-0 bg-transparent shadow-none hover:scale-105 transition-transform duration-300 cursor-pointer p-0 gap-0"
+                  className="group overflow-hidden border-0 bg-transparent shadow-none hover:scale-105 transition-transform duration-300 cursor-pointer p-1 gap-0"
                 >
                   <div className="relative aspect-square overflow-hidden mb-0 md:mb-3 bg-muted shadow-lg rounded-none md:rounded-xl">
                     {album.cover_image ? (
